@@ -40,5 +40,5 @@ def main():
 
         for v in range(0, len(curidd)):
             curidd[v] = curidd[v]+9
-    print("RESULT(founded words will be pink):\n"+result)
+    print("RESULT(founded words will be red):\n"+result)
 main()
