@@ -2,13 +2,13 @@ def main():
     choose=input("Input text[t]/find text[f]: ")
     text = ""
     if choose == "t":
-      text= input("Text: ")
+        text= input("Text: ")
     else:
-      import tkinter.filedialog
-      dir2 = tkinter.filedialog.askdirectory()
-      file = open(dir2, "r")
-      text = file.read()
-      file.close()
+        import tkinter.filedialog
+        dir2 = tkinter.filedialog.askopenfilename()
+        file = open(dir2, "r")
+        text = file.read()
+        file.close()
     if len(text) < 1:
         print("A len of text must be bigges 1 character!")
         from time import sleep
@@ -28,7 +28,7 @@ def main():
         if text[i] == find[curid]:
             curid += 1
 
-	# if ID of word = len of word
+    # if ID of word = len of word
         if curid == len(find):
             curid=0
             progress += 1
